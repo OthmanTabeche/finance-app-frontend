@@ -5,6 +5,8 @@ import perfectionist from 'eslint-plugin-perfectionist';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
+import prettier from 'eslint-plugin-prettier';
+import prettierConfig from 'eslint-config-prettier';
 
 export default defineConfig(
   {
@@ -27,6 +29,7 @@ export default defineConfig(
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
       'jsx-a11y': jsxA11y,
+      prettier,
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
@@ -35,7 +38,7 @@ export default defineConfig(
         { allowConstantExport: true },
       ],
       ...jsxA11y.configs.recommended.rules,
-      
+
       // Prevenir errores comunes en React
       '@typescript-eslint/no-misused-promises': [
         'error',
@@ -45,7 +48,11 @@ export default defineConfig(
           },
         },
       ],
+
+      // Prettier as an ESLint rule
+      'prettier/prettier': 'error',
     },
   },
-  perfectionist.configs['recommended-natural']
+  perfectionist.configs['recommended-natural'],
+  prettierConfig
 );

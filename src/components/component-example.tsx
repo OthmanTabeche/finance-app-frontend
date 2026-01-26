@@ -1,9 +1,36 @@
-import * as React from "react"
-
 import {
-  Example,
-  ExampleWrapper,
-} from "@/components/example"
+  BellIcon,
+  BluetoothIcon,
+  CreditCardIcon,
+  DownloadIcon,
+  EyeIcon,
+  FileCodeIcon,
+  FileIcon,
+  FileTextIcon,
+  FolderIcon,
+  FolderOpenIcon,
+  FolderSearchIcon,
+  HelpCircleIcon,
+  KeyboardIcon,
+  LanguagesIcon,
+  LayoutIcon,
+  LogOutIcon,
+  MailIcon,
+  MonitorIcon,
+  MoonIcon,
+  MoreHorizontalIcon,
+  MoreVerticalIcon,
+  PaletteIcon,
+  PlusIcon,
+  SaveIcon,
+  SettingsIcon,
+  ShieldIcon,
+  SunIcon,
+  UserIcon,
+} from 'lucide-react';
+import * as React from 'react';
+
+import { Example, ExampleWrapper } from '@/components/example';
 import {
   AlertDialog,
   AlertDialogAction,
@@ -15,9 +42,9 @@ import {
   AlertDialogMedia,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/components/ui/alert-dialog"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+} from '@/components/ui/alert-dialog';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardAction,
@@ -26,7 +53,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from '@/components/ui/card';
 import {
   Combobox,
   ComboboxContent,
@@ -34,7 +61,7 @@ import {
   ComboboxInput,
   ComboboxItem,
   ComboboxList,
-} from "@/components/ui/combobox"
+} from '@/components/ui/combobox';
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -51,9 +78,9 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { Field, FieldGroup, FieldLabel } from "@/components/ui/field"
-import { Input } from "@/components/ui/input"
+} from '@/components/ui/dropdown-menu';
+import { Field, FieldGroup, FieldLabel } from '@/components/ui/field';
+import { Input } from '@/components/ui/input';
 import {
   Select,
   SelectContent,
@@ -61,9 +88,8 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
-import { Textarea } from "@/components/ui/textarea"
-import { PlusIcon, BluetoothIcon, MoreVerticalIcon, FileIcon, FolderIcon, FolderOpenIcon, FileCodeIcon, MoreHorizontalIcon, FolderSearchIcon, SaveIcon, DownloadIcon, EyeIcon, LayoutIcon, PaletteIcon, SunIcon, MoonIcon, MonitorIcon, UserIcon, CreditCardIcon, SettingsIcon, KeyboardIcon, LanguagesIcon, BellIcon, MailIcon, ShieldIcon, HelpCircleIcon, FileTextIcon, LogOutIcon } from "lucide-react"
+} from '@/components/ui/select';
+import { Textarea } from '@/components/ui/textarea';
 
 export function ComponentExample() {
   return (
@@ -71,19 +97,19 @@ export function ComponentExample() {
       <CardExample />
       <FormExample />
     </ExampleWrapper>
-  )
+  );
 }
 
 function CardExample() {
   return (
-    <Example title="Card" className="items-center justify-center">
+    <Example className="items-center justify-center" title="Card">
       <Card className="relative w-full max-w-sm overflow-hidden pt-0">
         <div className="bg-primary absolute inset-0 z-30 aspect-video opacity-50 mix-blend-color" />
         <img
-          src="https://images.unsplash.com/photo-1604076850742-4c7221f3101b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Photo by mymind on Unsplash"
-          title="Photo by mymind on Unsplash"
+          alt="By mymind on Unsplash"
           className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale"
+          src="https://images.unsplash.com/photo-1604076850742-4c7221f3101b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          title="Photo by mymind on Unsplash"
         />
         <CardHeader>
           <CardTitle>Observability Plus is replacing Monitoring</CardTitle>
@@ -104,8 +130,7 @@ function CardExample() {
             <AlertDialogContent size="sm">
               <AlertDialogHeader>
                 <AlertDialogMedia>
-                  <BluetoothIcon
-                  />
+                  <BluetoothIcon />
                 </AlertDialogMedia>
                 <AlertDialogTitle>Allow accessory to connect?</AlertDialogTitle>
                 <AlertDialogDescription>
@@ -119,30 +144,30 @@ function CardExample() {
               </AlertDialogFooter>
             </AlertDialogContent>
           </AlertDialog>
-          <Badge variant="secondary" className="ml-auto">
+          <Badge className="ml-auto" variant="secondary">
             Warning
           </Badge>
         </CardFooter>
       </Card>
     </Example>
-  )
+  );
 }
 
 const frameworks = [
-  "Next.js",
-  "SvelteKit",
-  "Nuxt.js",
-  "Remix",
-  "Astro",
-] as const
+  'Next.js',
+  'SvelteKit',
+  'Nuxt.js',
+  'Remix',
+  'Astro',
+] as const;
 
 function FormExample() {
   const [notifications, setNotifications] = React.useState({
     email: true,
-    sms: false,
     push: true,
-  })
-  const [theme, setTheme] = React.useState("light")
+    sms: false,
+  });
+  const [theme, setTheme] = React.useState('light');
 
   return (
     <Example title="Form">
@@ -153,9 +178,8 @@ function FormExample() {
           <CardAction>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <MoreVerticalIcon
-                  />
+                <Button size="icon" variant="ghost">
+                  <MoreVerticalIcon />
                   <span className="sr-only">More options</span>
                 </Button>
               </DropdownMenuTrigger>
@@ -163,21 +187,18 @@ function FormExample() {
                 <DropdownMenuGroup>
                   <DropdownMenuLabel>File</DropdownMenuLabel>
                   <DropdownMenuItem>
-                    <FileIcon
-                    />
+                    <FileIcon />
                     New File
                     <DropdownMenuShortcut>⌘N</DropdownMenuShortcut>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <FolderIcon
-                    />
+                    <FolderIcon />
                     New Folder
                     <DropdownMenuShortcut>⇧⌘N</DropdownMenuShortcut>
                   </DropdownMenuItem>
                   <DropdownMenuSub>
                     <DropdownMenuSubTrigger>
-                      <FolderOpenIcon
-                      />
+                      <FolderOpenIcon />
                       Open Recent
                     </DropdownMenuSubTrigger>
                     <DropdownMenuPortal>
@@ -185,31 +206,26 @@ function FormExample() {
                         <DropdownMenuGroup>
                           <DropdownMenuLabel>Recent Projects</DropdownMenuLabel>
                           <DropdownMenuItem>
-                            <FileCodeIcon
-                            />
+                            <FileCodeIcon />
                             Project Alpha
                           </DropdownMenuItem>
                           <DropdownMenuItem>
-                            <FileCodeIcon
-                            />
+                            <FileCodeIcon />
                             Project Beta
                           </DropdownMenuItem>
                           <DropdownMenuSub>
                             <DropdownMenuSubTrigger>
-                              <MoreHorizontalIcon
-                              />
+                              <MoreHorizontalIcon />
                               More Projects
                             </DropdownMenuSubTrigger>
                             <DropdownMenuPortal>
                               <DropdownMenuSubContent>
                                 <DropdownMenuItem>
-                                  <FileCodeIcon
-                                  />
+                                  <FileCodeIcon />
                                   Project Gamma
                                 </DropdownMenuItem>
                                 <DropdownMenuItem>
-                                  <FileCodeIcon
-                                  />
+                                  <FileCodeIcon />
                                   Project Delta
                                 </DropdownMenuItem>
                               </DropdownMenuSubContent>
@@ -219,8 +235,7 @@ function FormExample() {
                         <DropdownMenuSeparator />
                         <DropdownMenuGroup>
                           <DropdownMenuItem>
-                            <FolderSearchIcon
-                            />
+                            <FolderSearchIcon />
                             Browse...
                           </DropdownMenuItem>
                         </DropdownMenuGroup>
@@ -229,14 +244,12 @@ function FormExample() {
                   </DropdownMenuSub>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem>
-                    <SaveIcon
-                    />
+                    <SaveIcon />
                     Save
                     <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <DownloadIcon
-                    />
+                    <DownloadIcon />
                     Export
                     <DropdownMenuShortcut>⇧⌘E</DropdownMenuShortcut>
                   </DropdownMenuItem>
@@ -246,34 +259,31 @@ function FormExample() {
                   <DropdownMenuLabel>View</DropdownMenuLabel>
                   <DropdownMenuCheckboxItem
                     checked={notifications.email}
-                    onCheckedChange={(checked) =>
+                    onCheckedChange={(checked) => {
                       setNotifications({
                         ...notifications,
-                        email: checked === true,
-                      })
-                    }
+                        email: checked,
+                      });
+                    }}
                   >
-                    <EyeIcon
-                    />
+                    <EyeIcon />
                     Show Sidebar
                   </DropdownMenuCheckboxItem>
                   <DropdownMenuCheckboxItem
                     checked={notifications.sms}
-                    onCheckedChange={(checked) =>
+                    onCheckedChange={(checked) => {
                       setNotifications({
                         ...notifications,
-                        sms: checked === true,
-                      })
-                    }
+                        sms: checked,
+                      });
+                    }}
                   >
-                    <LayoutIcon
-                    />
+                    <LayoutIcon />
                     Show Status Bar
                   </DropdownMenuCheckboxItem>
                   <DropdownMenuSub>
                     <DropdownMenuSubTrigger>
-                      <PaletteIcon
-                      />
+                      <PaletteIcon />
                       Theme
                     </DropdownMenuSubTrigger>
                     <DropdownMenuPortal>
@@ -281,22 +291,19 @@ function FormExample() {
                         <DropdownMenuGroup>
                           <DropdownMenuLabel>Appearance</DropdownMenuLabel>
                           <DropdownMenuRadioGroup
-                            value={theme}
                             onValueChange={setTheme}
+                            value={theme}
                           >
                             <DropdownMenuRadioItem value="light">
-                              <SunIcon
-                              />
+                              <SunIcon />
                               Light
                             </DropdownMenuRadioItem>
                             <DropdownMenuRadioItem value="dark">
-                              <MoonIcon
-                              />
+                              <MoonIcon />
                               Dark
                             </DropdownMenuRadioItem>
                             <DropdownMenuRadioItem value="system">
-                              <MonitorIcon
-                              />
+                              <MonitorIcon />
                               System
                             </DropdownMenuRadioItem>
                           </DropdownMenuRadioGroup>
@@ -309,20 +316,17 @@ function FormExample() {
                 <DropdownMenuGroup>
                   <DropdownMenuLabel>Account</DropdownMenuLabel>
                   <DropdownMenuItem>
-                    <UserIcon
-                    />
+                    <UserIcon />
                     Profile
                     <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <CreditCardIcon
-                    />
+                    <CreditCardIcon />
                     Billing
                   </DropdownMenuItem>
                   <DropdownMenuSub>
                     <DropdownMenuSubTrigger>
-                      <SettingsIcon
-                      />
+                      <SettingsIcon />
                       Settings
                     </DropdownMenuSubTrigger>
                     <DropdownMenuPortal>
@@ -330,19 +334,16 @@ function FormExample() {
                         <DropdownMenuGroup>
                           <DropdownMenuLabel>Preferences</DropdownMenuLabel>
                           <DropdownMenuItem>
-                            <KeyboardIcon
-                            />
+                            <KeyboardIcon />
                             Keyboard Shortcuts
                           </DropdownMenuItem>
                           <DropdownMenuItem>
-                            <LanguagesIcon
-                            />
+                            <LanguagesIcon />
                             Language
                           </DropdownMenuItem>
                           <DropdownMenuSub>
                             <DropdownMenuSubTrigger>
-                              <BellIcon
-                              />
+                              <BellIcon />
                               Notifications
                             </DropdownMenuSubTrigger>
                             <DropdownMenuPortal>
@@ -353,28 +354,26 @@ function FormExample() {
                                   </DropdownMenuLabel>
                                   <DropdownMenuCheckboxItem
                                     checked={notifications.push}
-                                    onCheckedChange={(checked) =>
+                                    onCheckedChange={(checked) => {
                                       setNotifications({
                                         ...notifications,
-                                        push: checked === true,
-                                      })
-                                    }
+                                        push: checked,
+                                      });
+                                    }}
                                   >
-                                    <BellIcon
-                                    />
+                                    <BellIcon />
                                     Push Notifications
                                   </DropdownMenuCheckboxItem>
                                   <DropdownMenuCheckboxItem
                                     checked={notifications.email}
-                                    onCheckedChange={(checked) =>
+                                    onCheckedChange={(checked) => {
                                       setNotifications({
                                         ...notifications,
-                                        email: checked === true,
-                                      })
-                                    }
+                                        email: checked,
+                                      });
+                                    }}
                                   >
-                                    <MailIcon
-                                    />
+                                    <MailIcon />
                                     Email Notifications
                                   </DropdownMenuCheckboxItem>
                                 </DropdownMenuGroup>
@@ -385,8 +384,7 @@ function FormExample() {
                         <DropdownMenuSeparator />
                         <DropdownMenuGroup>
                           <DropdownMenuItem>
-                            <ShieldIcon
-                            />
+                            <ShieldIcon />
                             Privacy & Security
                           </DropdownMenuItem>
                         </DropdownMenuGroup>
@@ -397,21 +395,18 @@ function FormExample() {
                 <DropdownMenuSeparator />
                 <DropdownMenuGroup>
                   <DropdownMenuItem>
-                    <HelpCircleIcon
-                    />
+                    <HelpCircleIcon />
                     Help & Support
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <FileTextIcon
-                    />
+                    <FileTextIcon />
                     Documentation
                   </DropdownMenuItem>
                 </DropdownMenuGroup>
                 <DropdownMenuSeparator />
                 <DropdownMenuGroup>
                   <DropdownMenuItem variant="destructive">
-                    <LogOutIcon
-                    />
+                    <LogOutIcon />
                     Sign Out
                     <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
                   </DropdownMenuItem>
@@ -462,7 +457,7 @@ function FormExample() {
                   <ComboboxContent>
                     <ComboboxEmpty>No frameworks found.</ComboboxEmpty>
                     <ComboboxList>
-                      {(item) => (
+                      {(item: (typeof frameworks)[number]) => (
                         <ComboboxItem key={item} value={item}>
                           {item}
                         </ComboboxItem>
@@ -480,7 +475,7 @@ function FormExample() {
               </Field>
               <Field orientation="horizontal">
                 <Button type="submit">Submit</Button>
-                <Button variant="outline" type="button">
+                <Button type="button" variant="outline">
                   Cancel
                 </Button>
               </Field>
@@ -489,5 +484,5 @@ function FormExample() {
         </CardContent>
       </Card>
     </Example>
-  )
+  );
 }
