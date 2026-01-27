@@ -1,12 +1,10 @@
 import { Outlet } from 'react-router';
 
-// Layout component for authentication routes (comparten logica)
+// Layout component for authentication routes (share logic)
 export function AuthLayout() {
   //const isAuthenticated = true;
 
-  // if (isAuthenticated) {
-  //   return <Navigate to="/home" replace />;
-  // }
+  // TODO: Redirect to home if already authenticated
 
   return (
     <div className="auth-container">
